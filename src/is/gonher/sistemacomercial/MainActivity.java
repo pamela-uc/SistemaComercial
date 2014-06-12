@@ -3,11 +3,10 @@ package is.gonher.sistemacomercial;
 import is.gh.sistemacomercial.R;
 import is.gonher.custom_view.GonherCustomView;
 import is.gonher.resources.GonherConstants;
-import android.support.v7.app.ActionBarActivity;
-import android.content.Context;
+import android.app.Activity;
 import android.os.Bundle;
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
