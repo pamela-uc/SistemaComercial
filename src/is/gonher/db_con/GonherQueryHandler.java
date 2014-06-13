@@ -7,20 +7,23 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
 public class GonherQueryHandler extends GonherDataBaseConn implements OnQueryInterface{
-
+	
 	private SQLiteDatabase db;
+	Context context;
 	
 	public GonherQueryHandler(Context context) {
 		super(context);
+		this.context = context;
 	}
 
 	@Override
 	public Cursor select(String query) {
 		db = this.getReadableDatabase();
 		Cursor cursor = db.rawQuery(query, null);	
+		
 		if (cursor != null)
 			cursor.moveToFirst();
-		//TODO recordar que cada ves que se haga un select deben hacer el cursor.close(); y db.close();
+		
 		return cursor;
 	}
 
@@ -28,9 +31,10 @@ public class GonherQueryHandler extends GonherDataBaseConn implements OnQueryInt
 	public Cursor getContentById(String tableName, Integer id){
 		db = this.getReadableDatabase();
 		Cursor cursor = db.query(tableName, null, "id=?", new String[] { String.valueOf(id) }, null, null, null, null);
+		
 		if (cursor != null)
 			cursor.moveToFirst();	
-		//TODO recordar que cada ves que se haga un select deben hacer el cursor.close(); y db.close();
+		
 		return cursor;
 	}
 
@@ -54,5 +58,12 @@ public class GonherQueryHandler extends GonherDataBaseConn implements OnQueryInt
 		db = this.getWritableDatabase();
 		db.update(tableName, content, "id = " + id, null);
 		db.close();
+	}
+	
+	public void selectClose(Cursor cursor){
+		cursor.close();
+		db.close();
+		super.onClose();
+		
 	}
 }

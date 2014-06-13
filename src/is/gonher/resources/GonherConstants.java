@@ -10,7 +10,7 @@ public class GonherConstants {
 	public static int EXIT_BUTTON = 4;
 	
 	//DataBase
-	public static String DATABASE = "";
+	public static String DATABASE = "gonher.db";
 	
 	//Network
 	public static int TYPE_WIFI = 1;
