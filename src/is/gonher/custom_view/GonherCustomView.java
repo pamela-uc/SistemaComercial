@@ -52,7 +52,7 @@ public class GonherCustomView {
 		RelativeLayout dialog_layout = new RelativeLayout(context);
 		
 		RelativeLayout.LayoutParams dialog_layout2 = new RelativeLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-		//need to be more efective
+		///need to be more efective
 		 
         dialog = new Dialog(context);
         dialog.setContentView(dialog_layout);
