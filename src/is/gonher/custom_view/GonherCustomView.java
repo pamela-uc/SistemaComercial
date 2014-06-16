@@ -1,8 +1,6 @@
 package is.gonher.custom_view;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-
 import is.gonher.resources.GonherConstants;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -12,10 +10,8 @@ import android.content.DialogInterface;
 import android.text.Html;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.Toast;
 
 public class GonherCustomView {
 
