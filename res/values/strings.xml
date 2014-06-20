@@ -4,5 +4,31 @@
     <string name="app_name">Sistema Comercial</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_cobranza">Cobranza</string>
+    
+  
+    <string name="label1">one</string>
+    <string name="label2">two</string>
+    <string name="body1"> body one</string>
+    <string name="body2">body two</string>    
 
+    <!-- Cobranza -->
+    <string-array name="tipos_cobro">
+        <item>Efectivo</item>
+        <item>Cheque</item>
+        <item>Transferencia</item>      
+    </string-array>
+    
+    <string-array name="bancos">
+        <item>Bancomer</item>
+        <item>Banamex</item>
+        <item>HSBC</item>      
+    </string-array>    
+    
+    <string-array name="tipos">
+        <item>Tipo uno</item>
+        <item>Tipo dos</item>
+        <item>Tipo tres</item>      
+    </string-array>        
+    
 </resources>

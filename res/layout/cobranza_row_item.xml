@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"    
+    android:orientation="horizontal"
+    android:padding="5dip" >
+
+ 
+ 
+    <TextView
+        android:id="@+id/cob_concentrado_col_folio"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="13sp"
+        />
+
+    <TextView
+        android:id="@+id/cob_concentrado_col_importe"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        
+        android:textColor="#343434"
+        android:textSize="13sp"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/cob_concentrado_col_folio"  />
+    
+    <TextView
+        android:id="@+id/cob_concentrado_col_tipo"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        
+        android:textColor="#343434"
+        android:textSize="13sp"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/cob_concentrado_col_importe"  />    
+ 
+  <TextView
+        android:id="@+id/cob_concentrado_col_banco"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        
+        android:textColor="#343434"
+        android:textSize="13sp"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/cob_concentrado_col_tipo"  />
+
+</RelativeLayout>

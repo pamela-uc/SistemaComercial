@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"    
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
+ 
+<TableLayout
+    android:id="@+id/TableLayout05"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal"
+    android:padding="10dp" >
+    
+<TableRow    >
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:layout_span="2"
+    android:gravity="center_horizontal"
+    android:height="30dp"
+    android:text="Abono"
+    android:textSize="20sp"
+    android:textStyle="bold" />
+
+</TableRow>    
+
+<TableRow  android:layout_width="200dp"  >
+
+<EditText
+    android:id="@+id/EditText01"
+    android:layout_width="wrap_content"
+    android:layout_span="2" />
+
+</TableRow>
+<TableRow  >
+<Button
+    android:id="@+id/btnAcpetar"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:text="Aceptar" />
+<Button
+    android:id="@+id/btnCancelar"
+    android:layout_width="150dp"
+    android:layout_height="wrap_content"
+    android:text="Cancelar" />
+
+</TableRow>
+</TableLayout>   
+ 
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    
+    android:id="@+id/tab3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+     >
+    
+    <RelativeLayout  
+    android:layout_width="fill_parent"
+    android:layout_height="35dp"
+    android:background="@drawable/list_selector"             
+    android:orientation="horizontal"
+    android:gravity="top"
+    android:padding="5dip" >
+
+ 
+          <TextView
+        android:id="@+id/cob_facturas_col_cargo_hd"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+         android:text="Cargo"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/cob_facturas_col_pago_hd"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+         android:text="Pago"
+        android:textColor="#343434"
+        android:textSize="15sp"
+        android:layout_marginTop="1dip"
+         android:textStyle="bold"
+        android:layout_toRightOf="@+id/cob_facturas_col_cargo_hd"  />
+    
+    <TextView
+        android:id="@+id/cob_facturas_col_saldo_hd"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+         android:text="Saldo"
+        android:textColor="#343434"
+        android:textSize="15sp"
+        android:layout_marginTop="1dip"
+         android:textStyle="bold"
+        android:layout_toRightOf="@+id/cob_facturas_col_pago_hd"  />    
+ 
+  <TextView
+        android:id="@+id/cob_facturas_col_descrip_hd"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Descripción"
+        android:textColor="#343434"
+        android:textSize="15sp"
+        android:layout_marginTop="1dip"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/cob_facturas_col_saldo_hd"  />
+  
+    <TextView
+        android:id="@+id/cob_facturas_col_tipo_hd"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Tipo"
+        android:textColor="#343434"
+        android:textSize="15sp"
+        android:layout_marginTop="1dip"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/cob_facturas_col_descrip_hd"  />
+  
+        
+ 
+   
+
+</RelativeLayout>    
+    
+    <ListView
+        android:id="@+id/Facturas_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="5dp" >
+    </ListView>
+    
+
+</LinearLayout>
