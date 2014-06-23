@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+<LinearLayout  
     android:id="@+id/tab2"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -22,28 +26,52 @@
     android:gravity="left|center_horizontal"
     android:textStyle="bold"
     android:textSize="14sp"
-    android:text="DETALLE DEL COBRO PARA EL FOLIO  :590876" />
+    android:text="DETALLE DE LA COBRANZA" />
 
-</TableRow>    
+</TableRow>        
+    
+<TableRow
+    android:id="@+id/TableRow02"
+    android:layout_gravity="center_horizontal"
+    android:gravity="left" >
+    
+<Button
+    android:id="@+id/Button01"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left|center_horizontal"
+    android:layout_span="2"
+    android:text="Guardar" />
+
+</TableRow>      
+    
+
 
 <TableRow android:id="@+id/TableRow01" >
 
 <TextView
     android:id="@+id/TextView01"
-    android:gravity="right"
+    android:layout_marginTop="5dp"
+    android:gravity="left"
     android:text="Folio:"
     android:width="120dp" />
 
-<EditText
-    android:id="@+id/EditText01"
+<TextView
+    android:id="@+id/txtFolio"
+    android:focusable="false"
+    android:paddingLeft="5dp"
+    android:text="3457890"
+    android:textSize="16sp"
+    android:textStyle="bold"
     android:width="210dp" />
 
 </TableRow>
-<TableRow android:id="@+id/TableRow02">
+  
+<TableRow android:id="@+id/TableRow011" >    
 
 <TextView
     android:id="@+id/TextView02"
-    android:gravity="right"
+    android:gravity="left"
     android:text="Importe Total :" />
 
 <EditText android:id="@+id/EditText02" />
@@ -52,7 +80,7 @@
 
 <TextView
     android:id="@+id/TextView03"
-    android:gravity="right"
+    android:gravity="left"
     android:text="Tipo Cobranza:" />
 
    <Spinner
@@ -66,7 +94,7 @@
 
 <TextView
     android:id="@+id/TextView04"
-    android:gravity="right"
+    android:gravity="left"
     android:text="Banco:" />
 
    <Spinner
@@ -78,7 +106,7 @@
 
 <TextView
     android:id="@+id/TextView05"
-    android:gravity="right"
+    android:gravity="left"
     android:text="Num.Cheque :" />
 
 <EditText android:id="@+id/EditText05" />
@@ -88,7 +116,7 @@
 
 <TextView
     android:id="@+id/TextView10"
-    android:gravity="right"
+    android:gravity="left"
     android:text="Tipo:" />
 
    <Spinner
@@ -97,16 +125,19 @@
         />
 </TableRow>
 
-<TableRow android:id="@+id/TableRow06">
+<TableRow
+    android:id="@+id/TableRow06"
+    android:layout_marginTop="10dp"
+     >
 
 <TextView
     android:id="@+id/TextView06"
-    android:gravity="center_horizontal"
+    android:gravity="left"
     android:text="Por Aplicar :" />
 
 <TextView
     android:id="@+id/TextView061"
-    android:gravity="center_horizontal"
+    android:gravity="left"
     android:text="Aplicado :" />
 
 </TableRow>
@@ -116,18 +147,8 @@
 <EditText android:id="@+id/EditText07_1" />
 </TableRow>
 
-<TableRow android:id="@+id/TableRow08">
-<Button android:id="@+id/Button01"
-android:layout_width="60dp"
-android:layout_height="wrap_content" android:text="Submit" />
 
-<Button
-    android:id="@+id/Button02"
-    android:layout_width="60dp"
-    android:layout_height="wrap_content"
-    android:text="Reset" />
-
-</TableRow>
 </TableLayout>   
  
 </LinearLayout>
+</ScrollView>

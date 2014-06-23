@@ -1,54 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/HorizontalScrollView01"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_marginTop="0dp"
+     android:paddingTop="0dp" >
     
+<LinearLayout  
     android:id="@+id/tab3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
+    android:layout_marginBottom="20dp"
+  
     android:descendantFocusability="blocksDescendants"
-     >
+    android:gravity="center"
+    android:orientation="vertical" >
     
-    <RelativeLayout  
-    android:layout_width="fill_parent"
-    android:layout_height="35dp"
-    android:background="@drawable/list_selector"             
-    android:orientation="horizontal"
-    android:gravity="top"
-    android:padding="5dip" >
-
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/list_selector"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+        
+          <TextView
+        android:id="@+id/cob_facturas_col_cargo_por_hd"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+         android:text="%"
+        android:textColor="#040404"
+        android:typeface="sans"
+        android:textSize="15sp"
+        android:textStyle="bold"/>        
  
           <TextView
         android:id="@+id/cob_facturas_col_cargo_hd"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-         android:text="Cargo"
+         android:text="#Cargo"
         android:textColor="#040404"
         android:typeface="sans"
         android:textSize="15sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/cob_facturas_col_cargo_por_hd"  
+        />
 
     <TextView
         android:id="@+id/cob_facturas_col_pago_hd"
-        android:layout_width="80dp"
+        android:layout_width="55dp"
         android:layout_height="wrap_content"
-         android:text="Pago"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/cob_facturas_col_cargo_hd"
+        android:gravity="center_horizontal"
+        android:paddingRight="10dp"
+        android:text="Pago"
         android:textColor="#343434"
         android:textSize="15sp"
-        android:layout_marginTop="1dip"
-         android:textStyle="bold"
-        android:layout_toRightOf="@+id/cob_facturas_col_cargo_hd"  />
+        android:textStyle="bold" />
     
     <TextView
         android:id="@+id/cob_facturas_col_saldo_hd"
-        android:layout_width="80dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
-         android:text="Saldo"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/cob_facturas_col_pago_hd"
+        android:gravity="center_horizontal"
+        android:text="Saldo"
         android:textColor="#343434"
         android:textSize="15sp"
-        android:layout_marginTop="1dip"
-         android:textStyle="bold"
-        android:layout_toRightOf="@+id/cob_facturas_col_pago_hd"  />    
+        android:textStyle="bold" />
  
   <TextView
         android:id="@+id/cob_facturas_col_descrip_hd"
@@ -71,19 +93,105 @@
         android:layout_marginTop="1dip"
         android:textStyle="bold"
         android:layout_toRightOf="@+id/cob_facturas_col_descrip_hd"  />
+    
+        <TextView
+        android:id="@+id/cob_facturas_col_importe_hd"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:text="Importe"
+        android:textColor="#343434"
+        android:textSize="15sp"
+        android:layout_marginTop="1dip"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/cob_facturas_col_tipo_hd"  />
+        
+    <TextView
+        android:id="@+id/cob_facturas_col_dv_hd"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="DV"
+        android:textColor="#343434"
+        android:textSize="15sp"
+        android:layout_marginTop="1dip"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/cob_facturas_col_importe_hd"  />    
+        
+    <TextView
+        android:id="@+id/cob_facturas_col_emision_hd"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Emisión"
+        android:textColor="#343434"
+        android:textSize="15sp"
+        android:layout_marginTop="1dip"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/cob_facturas_col_dv_hd"  />    
+        
+    <TextView
+        android:id="@+id/cob_facturas_col_vencimiento_hd"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:text="Vencimiento"
+        android:textColor="#343434"
+        android:textSize="15sp"
+        android:layout_marginTop="1dip"
+        android:textStyle="bold"
+        android:layout_toRightOf="@+id/cob_facturas_col_emision_hd"  />    
   
         
  
    
 
-</RelativeLayout>    
-    
+</RelativeLayout>
+
     <ListView
         android:id="@+id/Facturas_list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
+        android:choiceMode="singleChoice"
+        android:longClickable="true"
         android:paddingTop="5dp" >
+
     </ListView>
+    
+  <RelativeLayout
+      android:layout_width="fill_parent"
+      android:layout_height="35dp"
+      android:layout_gravity="top|left"
+      android:layout_marginBottom="14dp"
+      android:gravity="left"
+      android:orientation="horizontal"
+      android:padding="5dip" >
+ 
+  <TextView
+      android:id="@+id/txtFactImpTotalLbl"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="1dip"
+      android:gravity="left"
+      android:text="Total Pagos :"
+      android:textColor="#343434"
+      android:textSize="15sp"
+      android:textStyle="bold" />
+  
+    <TextView
+        android:id="@+id/txtFactImpTotal"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="false"
+        android:layout_marginTop="1dip"
+        android:layout_toRightOf="@+id/txtFactImpTotalLbl"
+        android:gravity="right"
+        android:paddingRight="4dp"
+        android:text="12,390.00"
+        android:textColor="#343434"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>        
     
 
 </LinearLayout>
+
+</HorizontalScrollView>
+  

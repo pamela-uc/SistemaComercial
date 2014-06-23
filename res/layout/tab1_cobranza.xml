@@ -20,7 +20,7 @@
  
     <TextView
          android:id="@+id/cob_concentrado_col_folio_hd"
-        android:layout_width="80dp"
+        android:layout_width="65dp"
         android:layout_height="wrap_content"
         android:text="Folio"
         android:focusable="false"
@@ -32,7 +32,7 @@
 
     <TextView
          android:id="@+id/cob_concentrado_col_importe_hd"
-        android:layout_width="90dp"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
          android:text="Importe"
          android:focusable="false"
@@ -41,11 +41,13 @@
         android:textSize="15sp"
         android:layout_marginTop="1dip"
         android:textStyle="bold"
+        android:gravity="center"
+        android:paddingRight="10dp"
         android:layout_toRightOf="@+id/cob_concentrado_col_folio_hd"  />
     
     <TextView
         android:id="@+id/cob_concentrado_col_tipo_hd"
-        android:layout_width="90dp"
+        android:layout_width="105dp"
         android:layout_height="wrap_content"
           android:text="Tipo Pago"
         android:textColor="#343434"
@@ -54,11 +56,12 @@
          android:focusableInTouchMode="false"
         android:layout_marginTop="1dip"
          android:textStyle="bold"
+        android:gravity="center"
         android:layout_toRightOf="@+id/cob_concentrado_col_importe_hd"  />    
  
   <TextView
         android:id="@+id/cob_concentrado_col_banco_hd"
-        android:layout_width="80dp"
+        android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:text="Banco"
         android:textColor="#343434"
@@ -72,6 +75,7 @@
 </RelativeLayout>
     
     <ListView
+        
         android:id="@+id/Cobranzas_list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

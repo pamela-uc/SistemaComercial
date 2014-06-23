@@ -1,19 +1,20 @@
 package is.gonher.cobranza;
 
 import android.support.v7.app.ActionBar.Tab;
-
 import android.support.v7.app.ActionBar.TabListener;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.app.Activity;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 import android.os.Build;
 
 public class CobranzaActivity extends ActionBarActivity {
@@ -27,6 +28,8 @@ public class CobranzaActivity extends ActionBarActivity {
             getSupportFragmentManager().beginTransaction()
                     .add(is.gonher.R.id.container, new PlaceholderFragment())
                     .commit();
+            
+            this.getSupportFragmentManager().executePendingTransactions(); 
         }
         
         ActionBar actionBar = this.getSupportActionBar();
@@ -83,6 +86,15 @@ public class CobranzaActivity extends ActionBarActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    
+    
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+ 
+        // Checks the orientation of the screen for landscape and portrait
+       
+    }    
 
     /**
      * A placeholder fragment containing a simple view.
@@ -119,33 +131,39 @@ private final Class<T> mClass;
  * @param clz
  *            The fragment's Class, used to instantiate the fragment
  */
-public TabListener(Activity activity, String tag, Class<T> clz) {
+public TabListener(Activity activity, String tag, Class<T> clz ) {
     mActivity = activity;
     mTag = tag;
     mClass = clz;
+    
 }
 
 public void onTabSelected(Tab tab, FragmentTransaction ft) {
     // Check if the fragment is already initialized
+	mFragment = getSupportFragmentManager().findFragmentByTag(mTag);
     if (mFragment == null) {
         // If not, instantiate and add it to the activity
         mFragment = Fragment.instantiate(mActivity, mClass.getName());
         ft.add(android.R.id.content, mFragment, mTag);
     } else {
         // If it exists, simply attach it in order to show it
-        ft.attach(mFragment);
+      //  ft.attach(mFragment);
+        ft.show(mFragment);
     }
 }
 
 public void onTabUnselected(Tab tab, FragmentTransaction ft) {
+	mFragment = getSupportFragmentManager().findFragmentByTag(mTag);
     if (mFragment != null) {
         // Detach the fragment, because another one is being attached
-        ft.detach(mFragment);
+      //  ft.detach(mFragment);
+        ft.hide(mFragment);
     }
 }
 
 public void onTabReselected(Tab tab, FragmentTransaction ft) {
     // User selected the already selected tab. Usually do nothing.
+	//Toast.makeText(CobranzaActivity.this, "Reselected!", Toast.LENGTH_SHORT).show();
 }
 }    
     

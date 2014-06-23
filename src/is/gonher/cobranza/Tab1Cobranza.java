@@ -2,6 +2,7 @@ package is.gonher.cobranza;
 
 
 import java.util.ArrayList;
+
 import java.util.List;
 
 import is.gonher.cobranza.bos.Cobranza;
@@ -49,6 +50,7 @@ public class Tab1Cobranza extends Fragment {
            
            
            listViewCobranza = ( ListView ) view.findViewById( is.gonher.R.id.Cobranzas_list);
+           listViewCobranza.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
            listViewCobranza.setAdapter( new CobranzasListAdapter(ctx, is.gonher.R.layout.cobranza_row_item, cobrosList ) );
       
            // Click event for single list row

@@ -16,7 +16,8 @@
     <string-array name="tipos_cobro">
         <item>Efectivo</item>
         <item>Cheque</item>
-        <item>Transferencia</item>      
+        <item>Transferencia</item>    
+        <item>Ficha</item>    
     </string-array>
     
     <string-array name="bancos">
@@ -26,9 +27,8 @@
     </string-array>    
     
     <string-array name="tipos">
-        <item>Tipo uno</item>
-        <item>Tipo dos</item>
-        <item>Tipo tres</item>      
+        <item>Local</item>
+        <item>Foraneo</item>               
     </string-array>        
     
 </resources>
