@@ -26,12 +26,23 @@ public class Tab1Cobranza extends Fragment {
 	 
     private ListView listViewCobranza;
     private Context ctx;	
+    
+    
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+
+      // Retain this fragment across configuration changes.
+      setRetainInstance(true);
+
+      
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
  
-    	
+    	   setRetainInstance(true);
     	   View view= inflater.inflate(is.gonher.R.layout.tab1_cobranza, container, false);
     	   ctx=this.getActivity(); 
            List<Cobranza> cobrosList= new ArrayList<Cobranza>();

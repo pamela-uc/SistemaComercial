@@ -19,6 +19,8 @@ import java.math.BigDecimal;
 
 
 
+
+
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -46,10 +48,34 @@ public class Tab3Cobranza extends Fragment {
 	    Dialog dlgPago =null ;
 	    FacturasListAdapter facturasListAdapter;
 	    View view;
+	    
+	    @Override
+	    public void onCreate(Bundle savedInstanceState) {
+	      super.onCreate(savedInstanceState);
 
+	      // Retain this fragment across configuration changes.
+	      setRetainInstance(true);
+
+	      
+	    }	    
+
+	    
+	    @Override
+	    public void onSaveInstanceState(Bundle savedState) {
+
+	        super.onSaveInstanceState(savedState);
+	         
+	        // Note: getValues() is a method in your ArrayAdaptor subclass
+	         
+	      //  savedState.put ("tabSelected", facturasList);
+	        
+
+	    }    	    
+	    
 	    @Override
 	    public View onCreateView(LayoutInflater inflater, ViewGroup container,
 	            Bundle savedInstanceState) {
+	    	    
 	    	   setRetainInstance(true);
 	    	    view= inflater.inflate(is.gonher.R.layout.tab3_cobranza, container, false);
 	    	   ctx=this.getActivity(); 

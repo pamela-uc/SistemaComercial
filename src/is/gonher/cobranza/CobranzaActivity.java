@@ -18,6 +18,8 @@ import android.widget.Toast;
 import android.os.Build;
 
 public class CobranzaActivity extends ActionBarActivity {
+	 
+	 ActionBar actionBar =null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +34,7 @@ public class CobranzaActivity extends ActionBarActivity {
             this.getSupportFragmentManager().executePendingTransactions(); 
         }
         
-        ActionBar actionBar = this.getSupportActionBar();
+        actionBar = this.getSupportActionBar();
         
         actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);   
         
@@ -59,12 +61,43 @@ public class CobranzaActivity extends ActionBarActivity {
         TabListener<Tab3Cobranza> tl3 = new TabListener<Tab3Cobranza>(this,
                 "tab3" , Tab3Cobranza.class);
         tab.setTabListener(tl3);
-        actionBar.addTab(tab);       
+        actionBar.addTab(tab);    
+        
+        actionBar.selectTab(tab);
+        
+        if( savedInstanceState!=null ){
+        
+           int idx=savedInstanceState.getInt("tabSelected");
+           actionBar.setSelectedNavigationItem(idx);
+        
+        
+        }
+        
+        
+         
 
         
         
         
     }
+    
+    
+    @Override
+    public void onSaveInstanceState(Bundle savedState) {
+
+        super.onSaveInstanceState(savedState);
+         
+        // Note: getValues() is a method in your ArrayAdaptor subclass
+         
+       // savedState.put ("tabSelected", facturasList);
+        savedState.putInt("tabSelected", actionBar.getSelectedNavigationIndex()  );
+        
+
+    }        
+    
+    
+    
+   
 
 
     @Override
@@ -91,7 +124,7 @@ public class CobranzaActivity extends ActionBarActivity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
- 
+        
         // Checks the orientation of the screen for landscape and portrait
        
     }    
